@@ -1,12 +1,23 @@
+/*!
+@file
+@brief Заголовочный файл класса Complex
+*/
 #ifndef _MY_COMPLEX_H_
 #define _MY_COMPLEX_H_
-
 #include <iostream>
 
-using namespace std;
-
+using namespace std;                    
+/*!
+@brief Класс комплексного числа
+*/
 class Complex {
+    /*!
+@brief Действительаня составляющая
+*/
   double Re;
+    /*!
+@brief Мнимая составляющая
+*/
   double Im;
 
 public:
@@ -27,7 +38,7 @@ public:
   Complex operator-(const double&);
   friend Complex operator-(const double&, const Complex&);
   Complex operator*(const Complex&);
-  Complex operator*(const double&);
+  Complex operator*(const double&);                 
   friend Complex operator*(const double&, const Complex&);
   Complex operator/(const double&);
 
