@@ -1,3 +1,8 @@
+/*!
+@file
+@brief Файл с описанием методов класса Complex
+*/
+
 #include <iostream>
 #include <cmath>
 
@@ -5,16 +10,27 @@
 
 using namespace std;
 
+/*!
+@brief Конутруктор класса
+@param aRe Действительная составляющая
+@param aIm Мнимая составляющая
+*/
+
 Complex::Complex(double aRe, double aIm) {
   Re = aRe;
   Im = aIm;
 }
-
+/*!
+@brief Конструктор класса
+@param o Комплексное число
+*/
 Complex::Complex(const Complex& o) {
   Re = o.Re;
   Im = o.Im;
 }
-
+/*!
+@brief Деструктор класса
+*/
 Complex::~Complex() {
   Re = 0.0;
   Im = 0.0;
@@ -24,7 +40,10 @@ void Complex::Set(double aRe, double aIm) {
   Re = aRe;
   Im = aIm;
 }
-
+/*!
+@brief Возвращает модуль комплексного числа
+@return Модуль комплексного числа
+*/
 Complex::operator double() { return abs(); }
 
 double Complex::abs() { return sqrt(Re * Re + Im * Im); }
